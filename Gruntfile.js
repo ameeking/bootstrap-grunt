@@ -1,5 +1,14 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    uglify: {
+      options: {
+        preserveComments: 'false'
+      },
+      bootstrap: {
+        src: 'src/js/main.js',
+        dest: 'public/js/main.min.js'
+      },
+    },
     less: {
       development: {
         options: {
@@ -26,11 +35,12 @@ module.exports = function(grunt) {
     }
   });
  
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   
-  grunt.registerTask('deploy', ['less','cssmin']);
-  grunt.registerTask('default', ['less','cssmin']);
+  grunt.registerTask('deploy', ['uglify', 'less', 'cssmin']);
+  grunt.registerTask('default', ['uglify', 'less', 'cssmin']);
  
 };
