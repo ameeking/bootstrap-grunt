@@ -2,7 +2,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     uglify: {
       options: {
-        preserveComments: 'false'
+        preserveComments: false,
+        mangle: false
       },
       bootstrap: {
         src: 'src/js/main.js',
