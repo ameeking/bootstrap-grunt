@@ -1,4 +1,4 @@
-Multipage AngularJs website
+Multipage AngularJS website
 ===============
 
 A simple multipage website that uses AngularJs, Bootstrap 3, Less and Grunt.
