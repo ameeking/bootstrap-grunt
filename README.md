@@ -1,7 +1,7 @@
-Bootstrap 3 website using AngularJS
+Multipage AngularJs website
 ===============
 
-A simple multipage website that uses Bootstrap 3 and AngularJs.
+A simple multipage website that uses AngularJs, Bootstrap 3, Less and Grunt.
 
 ##How to use##
 
