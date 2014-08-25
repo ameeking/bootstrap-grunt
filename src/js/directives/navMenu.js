@@ -1,19 +1,3 @@
-var app = angular.module('website', ['ngRoute']);
-  
-app.config(function($routeProvider) {
-    $routeProvider.
-      when('/about', {templateUrl:'partials/about.html'}).
-      when('/contact', {templateUrl:'partials/contact.html'}).
-      otherwise({redirectTo:'/home', templateUrl:'partials/home.html'});
-  }
-);
-
-function MainCtrl($scope, $location) {
-  $scope.setRoute = function(route) {
-    $location.path(route); 
-  }
-}
-
 app.directive('navMenu', function($location) {
   return function(scope, element, attrs) {
     var links = element.find('a'),
@@ -42,7 +26,6 @@ app.directive('navMenu', function($location) {
 
     scope.$on('$routeChangeStart', function() {
       var pathLink = urlMap[$location.path()];
-
       if (pathLink) {
         if (currentLink) {
           currentLink.parent('li').removeClass(onClass);

@@ -5,13 +5,13 @@ module.exports = function(grunt) {
         preserveComments: false,
         mangle: false
       },
-      bootstrap: {
-        src: 'src/js/main.js',
+      dist: {
+        src: ['src/js/*.js', 'src/js/controllers/*.js', 'src/js/directives/*.js'],
         dest: 'public/js/main.min.js'
       },
     },
     less: {
-      development: {
+      dist: {
         options: {
           paths: ['public/less'],
           yuicompress: false
