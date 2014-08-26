@@ -3,9 +3,18 @@ Multipage AngularJS website
 
 A simple multipage website that uses AngularJs, Bootstrap 3, Less and Grunt.
 
-##How to use##
+##Setup##
 
-This website requires Grunt to compile the files. Grunt will compile the less files into css and uglify (aggregate and minify) the javascript files. These files are then copied to the public folder.
+1. npm install
+2. grunt
+
+##Manually run server##
+
+1. npm start
+
+Go to http://localhost:3000 to view the site
+
+##Info##
 
 The website is split into two directories.
 * /public -- All publicly viewable files go in here
